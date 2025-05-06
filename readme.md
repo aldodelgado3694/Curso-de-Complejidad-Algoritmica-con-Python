@@ -6,7 +6,8 @@ Proyecto donde se recompilan los ejercicios para el Curso de Complejidad Algorí
 
 - Se creo en _ _init__.py con el codigo necesario para poder correr todos los modulos desde main.
 - Se hace uso de diccionario de parametros para pasar parametro y no modificar el modulo ya hecho.
-- En main encontrara comentado cada uno de los cofigos de ejmemplo y solo necesitaras ejecutra main.
+- En main encontraras comentado cada uno de los codigos de ejemplo y solo necesitaras ejecutra main.py.
+-Ejecucion desde linea de comandos
 
 ## Empezar
 
@@ -16,14 +17,14 @@ Proyecto donde se recompilan los ejercicios para el Curso de Complejidad Algorí
 python -m venv venv # Crear ambiente
 ```
 
-2. Instala requirements.txt 
+2.  Activa ambiante virtual
 
 ```sh
 source venv/bin/activate  #Activa ambiente
 # En Windows: venv\Scripts\activate
 ```
 
-3. Activa ambiante virtual 
+3.  Instala requirements.txt
 
 ```sh
 pip install -r requirements.txt
