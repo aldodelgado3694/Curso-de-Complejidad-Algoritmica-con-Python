@@ -1,0 +1,33 @@
+                         [8, 3, 1, 7, 0, 10, 2]  <-- Llamada 1 (Nivel 0)
+                        /                     \
+                       /                       \  (Divide)
+                      /                         \
+        [8, 3, 1]                          [7, 0, 10, 2]  <-- Llamada 2 y 3 (Nivel 1)
+       /         \                        /           \
+      /           \ (Divide)             /             \ (Divide)
+     /             \                    /               \
+  [8]           [3, 1]             [7, 0]             [10, 2] <-- Llamada 4,5,6,7 (Nivel 2)
+ (Base)        /     \             /     \             /     \
+              /       \ (Divide)  /       \ (Divide)  /       \ (Divide)
+             /         \           /         \           /         \
+           [3]         [1]       [7]         [0]       [10]        [2] <-- Base Cases (Nivel 3)
+          (Base)      (Base)    (Base)      (Base)     (Base)     (Base)
+
+--------------------------- FASE DE MERGE (Hacia Arriba) ---------------------------
+
+           [3]         [1]       [7]         [0]       [10]        [2]
+             \         /           \         /           \         /
+              \       / (Merge)     \       / (Merge)     \       / (Merge)
+               \     /               \     /               \     /
+             [1, 3]                 [0, 7]                [2, 10]  <-- Resultado del Merge en Nivel 2
+  [8]           |                      |                     |
+ (Base)         | (Merge)              | (Merge)             |
+    \           /                      \                     /
+     \         /                        \                   /
+      \       /                          \                 /
+      [1, 3, 8]                          [0, 2, 7, 10]  <-- Resultado del Merge en Nivel 1
+             \                              /
+              \                            / (Merge Final)
+               \                          /
+                \                        /
+             [0, 1, 2, 3, 7, 8, 10]  <-- Resultado del Merge en Nivel 0 (Lista Original Modificada)
